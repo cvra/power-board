@@ -45,7 +45,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 5
 Title ""
-Date "28 dec 2014"
+Date "11 jan 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -310,11 +310,7 @@ F 3 "~" H 700 5250 60  0000 C CNN
 	1    700  5250
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	1100 2300 3100 2300
-Wire Wire Line
-	1500 2300 1500 1700
-Connection ~ 1500 1700
+Connection ~ 3100 1700
 $Comp
 L GND #PWR?
 U 1 1 549FF471
@@ -330,7 +326,7 @@ Wire Wire Line
 	1100 2700 1200 2700
 Wire Wire Line
 	1200 2700 1200 2800
-Connection ~ 1500 4450
+Connection ~ 3100 4450
 $Comp
 L GND #PWR?
 U 1 1 549FF4F2
@@ -446,9 +442,6 @@ Wire Wire Line
 	1100 2400 2600 2400
 Wire Wire Line
 	2600 2400 2600 2700
-Wire Wire Line
-	3100 2300 3100 2700
-Connection ~ 1500 2300
 Wire Wire Line
 	1600 3200 1600 3450
 Wire Wire Line
@@ -671,7 +664,7 @@ Connection ~ 5800 1700
 Wire Wire Line
 	4900 5250 5300 5250
 Wire Wire Line
-	5300 5250 5300 4450
+	5300 4450 5300 5250
 Connection ~ 5300 4450
 Connection ~ 5800 4450
 Wire Wire Line
@@ -894,13 +887,7 @@ Wire Wire Line
 Connection ~ 3100 4050
 Connection ~ 1750 4050
 Wire Wire Line
-	5300 4450 1050 4450
-Wire Wire Line
-	5300 1700 1050 1700
-Wire Wire Line
-	1100 5050 3100 5050
-Wire Wire Line
-	1500 5050 1500 4450
+	5300 1700 2500 1700
 $Comp
 L R R?
 U 1 1 54A0152C
@@ -1001,9 +988,6 @@ Wire Wire Line
 	1100 5150 2600 5150
 Wire Wire Line
 	2600 5150 2600 5450
-Wire Wire Line
-	3100 5050 3100 5450
-Connection ~ 1500 5050
 Wire Wire Line
 	1600 5950 1600 6200
 Wire Wire Line
@@ -1196,4 +1180,36 @@ Wire Wire Line
 Connection ~ 9850 5400
 Text HLabel 10700 3100 2    60   Output ~ 0
 PWR_OUT
+$Comp
+L FUSE F?
+U 1 1 54B23998
+P 2250 1700
+F 0 "F?" H 2350 1750 40  0000 C CNN
+F 1 "FUSE 100A" H 2150 1650 40  0000 C CNN
+F 2 "~" H 2250 1700 60  0000 C CNN
+F 3 "~" H 2250 1700 60  0000 C CNN
+	1    2250 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 1700 2000 1700
+Wire Wire Line
+	3100 2700 3100 1700
+Wire Wire Line
+	3100 5450 3100 4450
+$Comp
+L FUSE F?
+U 1 1 54B23E5C
+P 2250 4450
+F 0 "F?" H 2350 4500 40  0000 C CNN
+F 1 "FUSE 100A" H 2150 4400 40  0000 C CNN
+F 2 "~" H 2250 4450 60  0000 C CNN
+F 3 "~" H 2250 4450 60  0000 C CNN
+	1    2250 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 4450 2000 4450
+Wire Wire Line
+	2500 4450 5300 4450
 $EndSCHEMATC
